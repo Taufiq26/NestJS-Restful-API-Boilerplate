@@ -1,0 +1,33 @@
+#!/bin/sh
+
+echo "Checking commit message format..."
+COMMIT_MSG_FILE=$1
+COMMIT_MSG=$(cat "$COMMIT_MSG_FILE")
+COMMIT_MSG_REGEX="^(feat|fix|docs|style|refactor|perf|test|build|ci|chore|revert|env|hotfix): .+"
+
+if ! echo "$COMMIT_MSG" | grep -Eq "$COMMIT_MSG_REGEX"; then
+  echo "ERROR: Commit message does not follow the required format."
+  echo "The correct format is: '{prefix}: {Short explanation}'"
+  echo ""
+  echo "Available prefixes:"
+  echo "  feat:     Introduces a new feature or functionality"
+  echo "  fix:      Fixes a bug or issue"
+  echo "  docs:     Updates or adds documentation"
+  echo "  style:    Code style changes (formatting, no logic impact)"
+  echo "  refactor: Code changes without fixing bugs or adding features"
+  echo "  perf:     Improves performance"
+  echo "  test:     Adds or updates tests"
+  echo "  build:    Changes build system or dependencies"
+  echo "  ci:       Updates CI configuration or scripts"
+  echo "  chore:    Routine tasks (e.g., config updates, minor changes)"
+  echo "  revert:   Reverts a previous commit"
+  echo "  env:      Changes related to environment variables or settings"
+  echo "  hotfix:   Urgent bug fix, often for production"
+  echo ""
+  echo "Examples:"
+  echo "  fix: resolve login authentication issue"
+  echo "  feat: add user profile management"
+  exit 1
+fi
+
+exit 0
