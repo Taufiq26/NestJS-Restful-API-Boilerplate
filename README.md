@@ -70,6 +70,34 @@ $ mau deploy
 
 With Mau, you can deploy your application in just a few clicks, allowing you to focus on building features rather than managing infrastructure.
 
+## Project Dependencies
+
+### Development Tools
+- `@swc/cli` and `@swc/core`: Rust-based TypeScript compiler
+- `@types/*`: TypeScript type definitions
+- `ts-loader`: TypeScript compilation for webpack
+- `typescript`: TypeScript compiler
+
+### Testing Setup
+- `@types/supertest`: Supertest type definitions
+- `jest`: Testing framework
+- `supertest`: HTTP assertion library
+- `ts-jest`: TypeScript support for Jest
+
+### Code Quality Tools
+- `eslint`: Code linting
+- `prettier`: Code formatting
+- `@eslint/eslintrc`: ESLint configuration
+- `@typescript-eslint/eslint-plugin`: TypeScript ESLint plugin
+- `@typescript-eslint/parser`: TypeScript ESLint parser
+- `eslint-config-prettier`: Disable ESLint rules that conflict with Prettier
+- `eslint-plugin-prettier`: ESLint plugin for Prettier
+- `typescript-eslint`: TypeScript ESLint
+
+### Git Hooks
+- `lint-staged`: Automatically runs linting and formatting on staged files
+- `postinstall`: Configures git hooks path to `.githooks`
+
 ## Resources
 
 Check out a few resources that may come in handy when working with NestJS:
