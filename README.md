@@ -79,6 +79,57 @@ With Mau, you can deploy your application in just a few clicks, allowing you to 
 - `lint-staged`: Automatically runs linting and formatting on staged files
 - `postinstall`: Configures git hooks path to `.githooks`
 
+## Commit Message Guidelines
+
+This project follows a specific commit message format to maintain a clear and consistent commit history. All commit messages must follow this format:
+
+```
+<type>: <description>
+```
+
+### Commit Types
+
+| Type       | Description |
+|------------|-------------|
+| feat       | Introduces a new feature or functionality |
+| fix        | Fixes a bug or issue |
+| docs       | Updates or adds documentation |
+| style     | Code style changes (formatting, no logic impact) |
+| refactor  | Code changes without fixing bugs or adding features |
+| perf      | Improves performance |
+| test      | Adds or updates tests |
+| build     | Changes build system or dependencies |
+| ci        | Updates CI configuration or scripts |
+| chore     | Routine tasks (e.g., config updates, minor changes) |
+| revert    | Reverts a previous commit |
+| env       | Changes related to environment variables or settings |
+| hotfix    | Urgent bug fix, often for production |
+
+### Examples
+
+```
+feat: add user authentication
+fix: resolve login validation issue
+docs: update API documentation
+style: format code according to style guide
+refactor: improve user service structure
+perf: optimize database queries
+test: add unit tests for auth service
+build: update dependencies
+ci: add GitHub Actions workflow
+chore: update .gitignore
+revert: revert accidental file deletion
+env: update database connection settings
+hotfix: fix critical security vulnerability
+```
+
+### Important Notes
+
+- The commit message should be in lowercase
+- Keep the description concise but descriptive
+- Use the imperative mood ("add" not "added" or "adds")
+- Reference issues or pull requests at the end of the message if applicable
+
 ## Resources
 
 Check out a few resources that may come in handy when working with NestJS:
